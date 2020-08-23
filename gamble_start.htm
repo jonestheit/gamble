@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Betting and gambling - settings</title>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<style>
+
+	@viewport{
+		zoom: 1.0;
+		width: extend-to-zoom;
+	}
+
+	@-ms-viewport{
+		width: extend-to-zoom;
+		zoom: 1.0;
+	}
+
+	td {
+		border-radius: 5px; 
+	}
+
+	h1 {
+		font-family: arial, sans-serif;
+		font-size: 24px;
+		color: #696969;
+		font-weight: bold;		
+	}
+	
+	p {
+		font-family: arial, sans-serif;
+		font-size: 20px;	
+	}
+	
+	.outertable { 
+		margin-left: auto;
+		margin-right: auto;
+		border: 8px solid silver;
+		border-radius: 17px; 
+		border-style:ridge;
+		border-spacing: 2px;
+		font-family: arial, sans-serif;
+		font-size: 20px;
+	}
+	
+
+	.info {
+		font-family: serif;
+		color: #696969
+		font-size: 16px;		
+	}
+	
+	#page-center {
+		 width: 800px;
+		 margin: auto;
+	}
+	
+
+	input#gobutton {
+		padding:2px;
+		margin:5px 0 2px 1px;
+		color:#f3f3f3;
+		font-size:20px;
+		background:#35b128;
+		border:1px solid #33842a;
+		-moz-border-radius: 5px; 
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75); 
+		-moz-box-shadow: 0 0 4px rgba(0,0,0, .75); 
+		box-shadow: 0 0 4px rgba(0,0,0, .75);
+		cursor:pointer;
+	}
+	
+</style>	
+
+</head>
+<body>
+
+<div id="page-center"> 
+
+	<TABLE class="outertable">
+	<TR>
+	<TD>
+
+	<H1>Winning Dice - Set your plan</H1>
+
+	<p>Use the form below to make your settings.<br>These will apply until you come back here to change them.</p>
+	
+	<form action="gamble_script.php" method="post">	
+		<input type="number" name="AnnualTarget" value="4500" size="8" min="1000" max="100000"> Target <span class="info">(min 1,000 &nbsp; max 100,000)</span><br><br>
+		<input type="number" name="BetsPerWeek" value="5" size="8" min="1" max="20"> Bets per week <span class="info">(min 1 &nbsp; max 20)</span><br><br>
+		<input type="number" name="WeeksPerYear" value="45" size="8" min="10" max="50"> Weeks per year <span class="info">(min 10 &nbsp; max 50)</span><br><br>
+		<input type="number" name="MyNumber" value="6" size="8" min="1" max="6"> Preferred dice number <span class="info">(your lucky number)</span><br><br>	
+		<input type="number" name="LimitOutlay" value="100000" size="8" min="0" max="100000"> Your maximum outlay <span class="info">(the most you could lose)</span><br><br>
+		<input type="number" name="LimitBet" value="10000" size="8" min="0" max="10000"> Your maximum bet <span class="info">(min 0 &nbsp; max 10,000)</span><br><br>
+		
+		<select name="ChosenOdds">
+			<option value="4/1">4/1</option>
+			<option value="5/1" selected>5/1</option>
+			<option value="6/1">6/1</option>
+		</select> The odds you will use <span class="info">(be careful)</span><br><br>
+		
+		<select name="LevelVariable">
+			<option value="Level" selected>Level</option>
+			<option value="Variable">Variable</option>
+		</select> Level or Variable bets <span class="info">(again, be careful)</span><br><br>
+		
+		<input id='gobutton' type='submit' name='cmdOK' value='Roll the dice'>
+	</form>
+
+	</TD>
+	</TR>
+	</TABLE>
+
+</div>
+
+</body>
+</html>
