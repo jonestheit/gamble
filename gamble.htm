@@ -1,0 +1,1406 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+<HEAD>
+<TITLE>Betting for a living</TITLE>
+<meta charset="UTF-8">
+<meta name="description" content="Winning Dice shows how easy it is to lose a fortune by gambling. The trick is finding the right odds.">
+<meta name="keywords" content="gambling, lose a fortune">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/*
+	@viewport{
+		zoom: 1.0;
+		width: device-width;
+	}
+
+.color1 {background-color: #558a9e;}
+.color2 {background-color: #cda9ca;}
+.color3 {background-color: #d8c1cd;}
+.color4 {background-color: #d8dac1;}
+.color5 {background-color: #efefdf;}
+
+.color1 {background-color: #bdb2d1;}
+.color2 {background-color: #bc8ebe;}
+.color3 {background-color: #e0c9cc;}
+.color4 {background-color: #e0e6ce;}
+.color5 {background-color: #efefe4;}
+*/
+.color1 {background-color: #edc7b7;}
+.color2 {background-color: #edc7b7;}
+.color3 {background-color: #eee2dc;}
+.color4 {background-color: #eee2dc;}
+.color5 {background-color: #eee2dc;}
+
+
+	@-ms-viewport{
+		width: extend-to-zoom;
+		zoom: 1.0;
+	}
+
+	html {
+		overflow-y: scroll;
+	}
+
+	th {
+		font-family: arial, sans-serif;
+		color: #171717;
+		font-weight: bold;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	td {
+		border: 1px solid gray;
+		border-width: thin;
+		border-radius: 5px;
+	}
+
+	.set-width {
+		width: 80px;
+	}
+
+	#allresults  table {
+		background-color: #dab827;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	#allresults  td {
+		background-color: #f0f0f0;
+		text-align: right;
+		padding:0 5px 0 0;
+		border-radius: 4px;
+	}
+
+	img.mainpic {
+		display: block;
+		margin-left: auto;
+		margin-right: auto
+	}
+
+
+	div.center iframe {
+		width: 400px;
+		background: white;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+a {
+	color: #7b47ba;
+}
+
+	.href {
+		font-family: arial, sans-serif;
+		color: #7b47ba;
+		font-weight: bold;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.hrefwhite {
+		font-family: arial, sans-serif;
+		font-weight: bold;
+		font-size: 20px;
+		text-align: center;
+
+		color:#f3f3f3;
+		background-color:#35b128;
+	}
+
+	.hrefwhite > a {
+		color: white;
+	}
+
+	.moneypos {
+		font-family: arial, sans-serif;
+		color: black;
+		font-weight: bold;
+		font-size: 20px;
+		text-align: right;
+	}
+
+	.moneyneg {
+		font-family: arial, sans-serif;
+		color: red;
+		font-weight: bold;
+		font-size: 20px;
+		text-align: right;
+	}
+
+	.moneybet {
+		font-family: arial, sans-serif;
+		color: dimgray;
+		font-weight: bold;
+		font-size: 20px;
+		text-align: right;
+	}
+
+	.headerbutton {
+		/* background-color: #fdd387;
+		padding: 2px 0px 2px 0px; */
+		font-size: 18px;
+		text-align:center;
+		font-weight: bold;
+	}
+
+	.oddsgreen {
+		color:#f3f3f3;
+		background-color:#35b128;
+		text-align:center;
+		font-weight: bold;
+	}
+
+	.oddsplain {
+		text-align:center;
+		font-weight: bold;
+	}
+
+	.bigbold {
+		color: #494949;
+		font-weight: bold;
+		font-size: 22px;
+	}
+
+/*
+.settings {
+	background-color:#fdfefd;
+}
+
+.thisyear {
+	background-color:#fdfefd;
+}
+
+.afteryears {
+	background-color:#fdfefd;
+}
+*/
+	.outertable {
+		margin-left: auto;
+		margin-right: auto;
+		border: 3px solid #123c69;
+
+		border-radius: 8px;
+
+		border-spacing: 2px;
+		font-family: arial, sans-serif;
+	}
+
+	.innertable {
+		margin-left: auto;
+		margin-right: auto;
+		border: 2px solid #123c69;
+		border-radius: 4px;
+
+		border-spacing: 1px;
+		padding: 1px;
+		font-family: arial, sans-serif;
+	}
+
+	.innertable td {
+		border-radius: 4px;
+	}
+
+	.normaltable {
+		border: 1px
+	}
+
+	.gobutton {
+		padding:2px;
+		margin:5px 0 2px 1px;
+		color:#f3f3f3;
+		font-size:18px;
+		background:#35b128;
+		border:1px solid #33842a;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+		-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+		box-shadow: 0 0 4px rgba(0,0,0, .75);
+		cursor:pointer;
+	}
+
+	.redbutton {
+		padding:2px;
+		margin:5px 0 2px 1px;
+		color:#f3f3f3;
+		font-size:18px;
+		background:#ff0000;
+		border:1px solid #33842a;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+		-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+		box-shadow: 0 0 4px rgba(0,0,0, .75);
+		cursor:pointer;
+	}
+
+	.noul a {
+		text-decoration:none;
+	}
+
+/* and this October 2016 for modal boxes */
+	.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
+
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+
+	.modalDialog > div {
+		width: 450px;
+		position: relative;
+		margin: 10% auto;
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		background: #fff;
+		background: -moz-linear-gradient(#ffc, #ffb);
+		background: -webkit-linear-gradient(#ffc, #ffb);
+		background: -o-linear-gradient(#ffc, #ffb);
+	}
+
+	.close {
+		background: #606061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #00d9ff; }
+
+</style>
+
+
+<script>
+
+	var gvAnnualTarget = getParameterByName('AnnualTarget');
+	var gvBetsPerWeek = getParameterByName('BetsPerWeek');
+	var gvWeeksPerYear = getParameterByName('WeeksPerYear');
+	var gvChosenOdds = getParameterByName('ChosenOdds');
+	var gvLimitOutlay = getParameterByName('LimitOutlay');
+	var gvLimitBet = getParameterByName('LimitBet');
+	var gvMyNumber = getParameterByName('MyNumber');
+	var gvLevelVariable = getParameterByName('LevelVariable');
+
+	//defaults here
+	if (gvAnnualTarget == null) {gvAnnualTarget = 5000}
+	if (gvBetsPerWeek == null) {gvBetsPerWeek = 20}
+	if (gvWeeksPerYear == null) {gvWeeksPerYear = 40}
+	if (gvChosenOdds == null) {gvChosenOdds = "5/1"}
+	if (gvLimitOutlay == null) {gvLimitOutlay = 80000}
+	if (gvLimitBet == null) {gvLimitBet = 10000}
+	if (gvMyNumber == null) {gvMyNumber = 6}
+	<!-- //if (gvLevelVariable == null) {gvLevelVariable = "Variable"} leave null to force user -->
+	if (gvLevelVariable == null) {gvLevelVariable = "Level"} //comment this line out to force user to set the settings at start
+
+
+	var gvRunning4 = 0;
+	var gvRunning5 = 0;
+	var gvRunning6 = 0;
+	var gvYears = 0;
+	var gvGoneBust = "";
+
+	var gvWorstOutlay4 = 0;
+	var gvWorstOutlay5 = 0;
+	var gvWorstOutlay6 = 0;
+
+	var gvRoll6 = 0;
+	var gvRollNot6 = 0;
+
+
+	function WithCommas(x) {
+		if (typeof x !== 'undefined' && x != null) {
+			// Now we know that x is defined, we are good to go.
+			var y = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			return "<span style=\"color:" + (x < 0 ? 'red':'black') + "\">" + y + "</span>";
+		}
+	}
+
+	function WithCommasWhite(x) {
+		if (typeof x !== 'undefined' && x != null) {
+			// Now we know that x is defined, we are good to go.
+			var y = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			return "<span style=\"color:" + (x < 0 ? 'white':'white') + "\">" + y + "</span>";
+		}
+	}
+
+	function showfeedbackform() {
+		showornot('page1');
+		showornot('feedback');
+		return false;
+	}
+
+	function swappages() {
+		showornot('start-form');
+		showornot('page1');
+		return false;
+	}
+
+	function showornot(show) {
+		var yesno = document.getElementById(show);
+		yesno.style.display = yesno.style.display === 'none'  ? 'block' : 'none';
+		return false;
+	}
+
+	function getParameterByName(name, url) {
+		if (!url) {
+		  url = window.location.href;
+		}
+		name = name.replace(/[\[\]]/g, "\\$&");
+		var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+
+	function PlayYear() {
+
+		gvYears += 1;
+
+		var strDetail="<table><tr><td colspan='9' style='text-align:center;'>This year at odds of " + gvChosenOdds + "</td></tr>";
+		strDetail+="<tr><td colspan='2' style='text-align:center;'>Roll</td><td style='border:none;'>&nbsp;</td><td colspan='2' style='text-align:center;'>Level Bets</td><td style='border:none;'>&nbsp;</td><td colspan='3' style='text-align:center;'>Variable Bets</td></tr>";
+		strDetail+="<tr><td style='text-align:center;'>Count</td><td style='text-align:center;'>Dice</td><td style='border:none;'>&nbsp;</td><td style='text-align:center;'>Level Bet</td><td style='text-align:center;'>Account</td><td style='border:none;'>&nbsp;</td><td style='text-align:center;'>Variable Bet</td><td style='text-align:center;'>Account</td><td style='text-align:center;'>Pocket</td></tr>";
+
+		var vRoll = 0;
+
+		var vCount1=0;
+		var vCount2=0;
+		var vCount3=0;
+		var vCount4=0;
+		var vCount5=0;
+		var vCount6=0;
+
+		var vCurrentLosingStreak=0;
+		var vCurrentWinningStreak=0;
+
+		var vMaxLosingStreak=0;
+		var vMaxWinningStreak=0;
+
+		var vBet=0;
+
+		var vTank4=0;
+		var vMinTank4=0;
+		var vMaxTank4=0;
+		var vTank4v=0;
+		var vPocket4v=0;
+		var vMinTank4v=0;
+		var vMaxTank4v=0;
+		var vWorstOutlay4v=0;
+
+		var vTank5=0;
+		var vMinTank5=0;
+		var vMaxTank5=0;
+		var vTank5v=0;
+		var vPocket5v=0;
+		var vMinTank5v=0;
+		var vMaxTank5v=0;
+		var vWorstOutlay5v=0;
+
+		var vTank6=0;
+		var vMinTank6=0;
+		var vMaxTank6=0;
+		var vTank6v=0;
+		var vPocket6v=0;
+		var vMinTank6v=0;
+		var vMaxTank6v=0;
+		var vWorstOutlay6v=0;
+
+		var vThisBetv=0;
+		var vThisTankv=0;
+		var vThisPocketv=0;
+		var vThisWorstOutlayv=0;
+
+		var vNumberOfBets=(gvBetsPerWeek * gvWeeksPerYear);
+		var vBet=(Math.round((gvAnnualTarget/vNumberOfBets) * 6/5));
+
+		var vAimToWin=(Math.round((gvAnnualTarget/vNumberOfBets)* 6));
+
+		var vOutlay=0;
+
+	//roll vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv this is the beginning of each roll vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+		while (vRoll < vNumberOfBets) {
+
+			strDetail+="<tr>";
+
+			var vDice =  Math.floor((Math.random() * 6) + 1);
+
+			if (gvLevelVariable=="Level") {
+				if (vBet > gvLimitBet) {
+					if (gvGoneBust=="") {
+						gvGoneBust = "A level bet of " + WithCommasWhite(vBet) + "<br>would be greater than your allowable bet of " + WithCommasWhite(gvLimitBet);
+					}
+				}
+			}
+
+		//Calculate variable bets for each roll
+			var vBet4v = Math.round((vAimToWin - vTank4v) / 4);
+			var vBet5v = Math.round((vAimToWin - vTank5v) / 5);
+			var vBet6v = Math.round((vAimToWin - vTank6v) / 6);
+
+			switch (gvChosenOdds) {
+				case "4/1":
+					vThisBetv=vBet4v;
+					break;
+
+				case "5/1":
+					vThisBetv=vBet5v;
+					break;
+
+				case "6/1":
+					vThisBetv=vBet6v;
+					break;
+			}
+
+			//check if we go bust on the size of bet
+ 			if (gvLevelVariable=="Variable") {
+				if (vThisBetv > gvLimitBet) {
+					if (gvGoneBust=="") {
+						gvGoneBust = "A bet of " + WithCommasWhite(vThisBetv) + " at odds of " + gvChosenOdds + "<br>would be greater than your allowable bet of " + WithCommasWhite(gvLimitBet);
+					}
+				}
+			}
+
+		//if we've gone bust by size of bet write the rest of the line as empties and break the loop
+			if (gvGoneBust != "") {
+				//for level bet part of string
+				strDetail+="<td>" + (vRoll + 1) + "</td>" + "<td>-</td><td style='border:none;'>&nbsp;</td><td>" + vBet + "</td><td>" + WithCommas(vTank4) + "</td><td style='border:none;'>&nbsp;</td>";
+				//for the variable part
+				strDetail+="<td>" + WithCommas(vThisBetv) + "</td><td>LOST</td><td>" + WithCommas(vThisPocketv) + "</td>";
+				strDetail+="</tr>";
+
+				break;
+			}
+
+
+
+		//WorstOutlays - working on minus numbers
+			vOutlay = vTank4v - vBet4v;
+			if (vOutlay < vWorstOutlay4v) {
+				vWorstOutlay4v = vOutlay;
+			}
+			if (vWorstOutlay4v < gvWorstOutlay4) {
+				gvWorstOutlay4 = vWorstOutlay4v;
+			}
+
+			vOutlay = vTank5v - vBet5v;
+			if (vOutlay < vWorstOutlay5v) {
+				vWorstOutlay5v = vOutlay;
+			}
+			if (vWorstOutlay5v < gvWorstOutlay5) {
+				gvWorstOutlay5 = vWorstOutlay5v;
+			}
+
+			vOutlay = vTank6v - vBet6v;
+			if (vOutlay < vWorstOutlay6v) {
+				vWorstOutlay6v = vOutlay;
+			}
+			if (vWorstOutlay6v < gvWorstOutlay6) {
+				gvWorstOutlay6 = vWorstOutlay6v;
+			}
+
+
+			if (gvLevelVariable=="Variable") {
+				switch (gvChosenOdds) {
+					case "4/1":
+						vThisWorstOutlayv = vWorstOutlay4v;
+						break;
+
+					case "5/1":
+						vThisWorstOutlayv = vWorstOutlay5v;
+						break;
+
+					case "6/1":
+						vThisWorstOutlayv = vWorstOutlay6v;
+						break;
+				}
+			}
+
+
+		//check if bust on outlay
+			if (vThisWorstOutlayv < 0 - gvLimitOutlay) {
+				if (gvGoneBust=="") {
+					gvGoneBust = "At odds of " + gvChosenOdds + " your outlay of " + WithCommasWhite(0-vThisWorstOutlayv) + " exceeds your limit of " + WithCommasWhite(gvLimitOutlay) + "<br>You cannot continue&#33;"
+				}
+			}
+
+
+		//if we've gone bust by Outlay write the rest of the line and break the loop - NB this only applies to Variable, so need to do Level part manually
+			if (gvGoneBust != "") {
+				//for level bet part of string
+				strDetail+="<td>" + (vRoll + 1) + "</td>" + (vDice!=gvMyNumber ? "<td>" : "<td style='background-color:green;'>") + vDice + "</td><td style='border:none;'>&nbsp;</td><td>" + vBet + "</td><td>" + WithCommas(vTank4-vBet) + "</td><td style='border:none;'>&nbsp;</td>";
+
+				//for the variable part
+				strDetail+="<td>" + WithCommas(vThisBetv) + "</td><td>" + WithCommas(vThisWorstOutlayv) + "</td><td>" + WithCommas(vThisPocketv) + "</td>";
+				strDetail+="</tr>";
+
+				break;
+			}
+
+
+
+			switch (vDice) {
+				case 1:
+					vCount1++;
+					break;
+				case 2:
+					vCount2++;
+					break;
+				case 3:
+					vCount3++;
+					break;
+				case 4:
+					vCount4++;
+					break;
+				case 5:
+					vCount5++;
+					break;
+				case 6:
+					vCount6++;
+					break;
+			}
+
+
+			//win or lose
+			if (vDice==gvMyNumber) {
+				//we win
+				vCurrentWinningStreak++;
+				vCurrentLosingStreak=0;
+
+				//keep running total of MyNumber for quality control
+				gvRoll6++;
+
+				gvRunning4 = gvRunning4 + (4 * vBet);
+				vTank4 = vTank4 + (4 * vBet);
+				vTank4v = vTank4v + (4 * vBet4v);
+
+				gvRunning5 = gvRunning5 + (5 * vBet);
+				vTank5 = vTank5 + (5 * vBet);
+				vTank5v = vTank5v + (5 * vBet5v);
+
+				gvRunning6 = gvRunning6 + (6 * vBet);
+				vTank6 = vTank6 + (6 * vBet);
+				vTank6v = vTank6v + (6 * vBet6v);
+
+				//Empty the tank into your pocket for variable bets
+				vPocket4v = vPocket4v + vTank4v;
+				vPocket5v = vPocket5v + vTank5v;
+				vPocket6v = vPocket6v + vTank6v;
+
+				//and start again
+				vTank4v = 0;
+				vTank5v = 0;
+				vTank6v = 0;
+
+
+				vThisTankv = 0;
+				//vThisPocketv += vAimToWin; Not accurate
+
+				switch (gvChosenOdds) {
+					case "4/1":
+						vThisPocketv = vPocket4v;
+						break;
+					case "5/1":
+						vThisPocketv = vPocket5v;
+						break;
+					case "6/1":
+						vThisPocketv = vPocket6v;
+						break;
+				}
+
+			} else {
+				//we lose
+				vCurrentLosingStreak++;
+				vCurrentWinningStreak=0;
+
+				//keep running total
+				gvRollNot6++;
+
+				gvRunning4 = gvRunning4 - vBet;
+				vTank4 = vTank4 - vBet;
+				vTank4v = vTank4v - vBet4v;
+
+				gvRunning5 = gvRunning5 - vBet;
+				vTank5 = vTank5 - vBet;
+				vTank5v = vTank5v - vBet5v;
+
+				gvRunning6= gvRunning6 - vBet;
+				vTank6 = vTank6 - vBet;
+				vTank6v = vTank6v - vBet6v;
+
+
+				switch (gvChosenOdds) {
+					case "4/1":
+						vThisTankv=vTank4v;
+						break;
+
+					case "5/1":
+						vThisTankv=vTank5v;
+						break;
+
+					case "6/1":
+						vThisTankv=vTank6v;
+						break;
+				}
+
+
+				// Min and Max tanks
+				if (vTank4 < vMinTank4) {vMinTank4 = vTank4;}
+				if (vTank4 > vMaxTank4) {vMaxTank4 = vTank4;}
+
+				if (vTank5 < vMinTank5) {vMinTank5 = vTank5;}
+				if (vTank5 > vMaxTank5) {vMaxTank5 = vTank5;}
+
+				if (vTank6 < vMinTank6) {vMinTank6 = vTank6;}
+				if (vTank6 > vMaxTank6) {vMaxTank6 = vTank6;}
+
+
+				if (vTank4v < vMinTank4v) {vMinTank4v = vTank4v;}
+				if (vTank4v > vMaxTank4v) {vMaxTank4v = vTank4v;}
+
+				if (vTank5v < vMinTank5v) {vMinTank5v = vTank5v;}
+				if (vTank5v > vMaxTank5v) {vMaxTank5v = vTank5v;}
+
+				if (vTank6v < vMinTank6v) {vMinTank6v = vTank6v;}
+				if (vTank6v > vMaxTank6v) {vMaxTank6v = vTank6v;}
+			}
+
+
+			//GOOD HERE
+			//for level bet part of string
+			strDetail+="<td>" + (vRoll + 1) + "</td>" + (vDice!=gvMyNumber ? "<td>" : "<td style='background-color:green;'>") + vDice + "</td><td style='border:none;'>&nbsp;</td><td>" + vBet + "</td><td>" + WithCommas(vTank4) + "</td><td style='border:none;'>&nbsp;</td>";
+
+			//for variable part
+			strDetail+="<td>" + WithCommas(vThisBetv) + "</td><td>" + WithCommas(vThisTankv) + "</td><td>" + WithCommas(vThisPocketv) + "</td>";
+			strDetail+="</tr>";
+
+
+			// Losing / Winning streaks
+			if (vCurrentWinningStreak > vMaxWinningStreak) {vMaxWinningStreak = vCurrentWinningStreak;}
+			if (vCurrentLosingStreak > vMaxLosingStreak) {vMaxLosingStreak = vCurrentLosingStreak;}
+
+
+			//Have we gone bust already on the size of the bet?
+			if (gvGoneBust!="") {
+				strDetail+="<td colspan='9' style='background-color:red; color: white; font-weight:bold; text-align:left;'>" + gvGoneBust + "</td>";
+				break;
+			}
+
+			vRoll++;
+		}
+
+		strDetail+="</table>";
+		strDetail+="<button class='gobutton' onclick=\"return showornot('allresults'); return false;\" style=\"display:block; margin-left:auto; margin-right:auto;\">hide these results</button>";
+
+		document.getElementById("allresults").innerHTML = strDetail;
+		document.getElementById("totalyears").innerHTML = gvYears + (gvYears > 1 ? " years " : " year ");
+		document.getElementById("totalyears1").innerHTML = gvYears + (gvYears > 1 ? " years " : " year ");
+		document.getElementById("averaging").innerHTML = "1/" + gvRollNot6/gvRoll6;
+
+		//show counts
+		document.getElementById("count1").innerHTML = vCount1;
+		document.getElementById("count2").innerHTML = vCount2;
+		document.getElementById("count3").innerHTML = vCount3;
+		document.getElementById("count4").innerHTML = vCount4;
+		document.getElementById("count5").innerHTML = vCount5;
+		document.getElementById("count6").innerHTML = vCount6;
+		document.getElementById("countall").innerHTML = vCount1 + vCount2 + vCount3 + vCount4 + vCount5 + vCount6;
+
+		document.getElementById("maxwinningstreak").innerHTML = vMaxWinningStreak;
+		document.getElementById("maxlosingstreak").innerHTML = vMaxLosingStreak;
+
+
+		//fill the boxes
+		//this year
+		document.getElementById("level4tank").innerHTML = WithCommas(vTank4);
+		document.getElementById("level4worst").innerHTML = WithCommas(vMinTank4);
+		document.getElementById("level4best").innerHTML = WithCommas(vMaxTank4);
+		document.getElementById("v4pocket").innerHTML = WithCommas(vPocket4v);
+		document.getElementById("v4worst").innerHTML = WithCommas(vWorstOutlay4v);
+
+		document.getElementById("level5tank").innerHTML = WithCommas(vTank5);
+		document.getElementById("level5worst").innerHTML = WithCommas(vMinTank5);
+		document.getElementById("level5best").innerHTML = WithCommas(vMaxTank5);
+		document.getElementById("v5pocket").innerHTML = WithCommas(vPocket5v);
+		document.getElementById("v5worst").innerHTML = WithCommas(vWorstOutlay5v);
+
+		document.getElementById("level6tank").innerHTML = WithCommas(vTank6);
+		document.getElementById("level6worst").innerHTML = WithCommas(vMinTank6);
+		document.getElementById("level6best").innerHTML = WithCommas(vMaxTank6);
+		document.getElementById("v6pocket").innerHTML = WithCommas(vPocket6v);
+		document.getElementById("v6worst").innerHTML = WithCommas(vWorstOutlay6v);
+
+		//all years
+		document.getElementById("level4tankever").innerHTML = WithCommas(gvRunning4);
+		document.getElementById("level4average").innerHTML = WithCommas(Math.round(gvRunning4/gvYears));
+		document.getElementById("v4worstever").innerHTML = WithCommas(gvWorstOutlay4);
+
+		document.getElementById("level5tankever").innerHTML = WithCommas(gvRunning5);
+		document.getElementById("level5average").innerHTML = WithCommas(Math.round(gvRunning5/gvYears));
+		document.getElementById("v5worstever").innerHTML = WithCommas(gvWorstOutlay5);
+
+		document.getElementById("level6tankever").innerHTML = WithCommas(gvRunning6);
+		document.getElementById("level6average").innerHTML = WithCommas(Math.round(gvRunning6/gvYears));
+		document.getElementById("v6worstever").innerHTML = WithCommas(gvWorstOutlay6);
+
+
+		if (gvGoneBust!="") {
+			document.getElementById("mainclick").style.display = "none";
+			document.getElementById("gonebust").style.display = "inline";
+
+			document.getElementById("gonebustthisyear").innerHTML = "<p style='background-color:red; color: white; font-weight:bold;'>" + gvGoneBust + "</p>";
+			document.getElementById("gonebustthisyear").style.display = "inline";
+		}
+
+		document.getElementById("goback").style.display='inline';
+	}
+
+
+	function validateForm() {
+		var x = document.forms["DiceForm"]["AnnualTarget"].value;
+
+		if (x < 1000 || x > 100000) {
+			document.getElementById("form-at").innerHTML = "<span style='background-color:red; color: white; font-weight:bold;'>(min 1,000 max 100,000)</span>";
+			return false;
+		} else {
+			document.getElementById("form-at").innerHTML = "<span>(min 1,000 max 100,000)</span>";
+		}
+		<!-- if (x < 1000 || x > 100000) { alert("Your Annual Target must be between 1,000 and 100,000"); return false;	} -->
+
+
+		x = document.forms["DiceForm"]["BetsPerWeek"].value;
+		if (x < 1 || x > 20) {
+			document.getElementById("form-bpw").innerHTML = "<span style='background-color:red; color: white; font-weight:bold;'>(min 1 max 20)</span>";
+			return false;
+		} else {
+			document.getElementById("form-bpw").innerHTML = "<span>(min 1 max 20)</span>";
+		}
+		<!-- if (x < 1 || x > 20) { alert("Bets per week should be betweeen 1 and 20"); return false; } -->
+
+
+		x = document.forms["DiceForm"]["WeeksPerYear"].value;
+		if (x < 1 || x > 52) {
+			document.getElementById("form-wpy").innerHTML = "<span style='background-color:red; color: white; font-weight:bold;'>(min 10 max 52)</span>";
+			return false;
+		} else {
+			document.getElementById("form-wpy").innerHTML = "<span>(min 10 max 52)</span>";
+		}
+		<!-- if (x < 10 || x > 52) { alert("Please bet between 10 and 52 weeks per year"); return false; } -->
+
+
+		x = document.forms["DiceForm"]["MyNumber"].value;
+				if (x < 1 || x > 6) {
+			document.getElementById("form-pdn").innerHTML = "<span style='background-color:red; color: white; font-weight:bold;'>(min 1 max 6)</span>";
+			return false;
+		} else {
+			document.getElementById("form-pdn").innerHTML = "<span>(min 1 max 6)</span>";
+		}
+		<!-- if (x < 1 || x > 6) { alert("Dice number must be between 1 and 6"); return false; } -->
+
+
+		x = document.forms["DiceForm"]["LimitOutlay"].value;
+				if (x < 1 || x > 100000) {
+			document.getElementById("form-lo").innerHTML = "<span style='background-color:red; color: white; font-weight:bold;'>(max  100,000)</span>";
+			return false;
+		} else {
+			document.getElementById("form-lo").innerHTML = "<span>(max  100,000)</span>";
+		}
+		<!-- if (x < 1 || x > 100000) { alert("You maximum debt must not exceed 100,000"); return false; } -->
+
+
+		x = document.forms["DiceForm"]["LimitBet"].value;
+				if (x < 1 || x > 10000) {
+			document.getElementById("form-lb").innerHTML = "<span style='background-color:red; color: white; font-weight:bold;'>(max  10,000)</span>";
+			return false;
+		} else {
+			document.getElementById("form-lb").innerHTML = "<span>(max  10,000)</span>";
+		}
+		<!-- if (x < 1 || x > 10000) { alert("You maximum bet must not exceed 10,000"); return false; } -->
+
+
+		x = document.forms["DiceForm"]["LevelVariable"].value;
+				if (x != "Level" && x != "Variable") {
+			document.getElementById("form-lv").innerHTML = "<span style='background-color:red; color: white; font-weight:bold;'>Which?</span>";
+			return false;
+		} else {
+			document.getElementById("form-lv").innerHTML = x;
+		}
+
+		return true;
+	}
+
+</script>
+
+</head>
+
+<body>
+<noscript>Sorry, this app only works on devices that support Javascript. Your device does not support JavaScript!</noscript>
+
+
+<div id="start-form">
+
+	<table class="outertable">
+	<tr>
+	<td style="border:none; padding: 0 5px 0 5px;">
+	<img src="diceall62.png" alt="dice picture" class="mainpic">
+
+	<H1 style='text-align:center;'>Winning Dice - Your Settings</H1>
+
+	<p>Use the form below to make your settings for each year.<br>These will apply until you come back here to change them. <a href="#openModalTellAll"><img src="questionmark24.png" alt='info' style='vertical-align:top;'></a></p>
+
+	<form id="DiceForm" onsubmit="return validateForm()" method="get">
+		<input type="number" name="AnnualTarget" id="AnnualTarget" class="set-width" min="1000" max="100000" required> Annual Target <a href="#openModalAnnualTarget"><img src="questionmark24.png" alt='info' style='vertical-align:top;'></a> <span class="info" id="form-at">(min 1,000 &nbsp; max 100,000)</span><br><br>
+		<input type="number" name="BetsPerWeek" id="BetsPerWeek" class="set-width" min="1" max="20" required> Bets per week <a href="#openModalBetsPerWeek"><img src="questionmark24.png" alt='info' style='vertical-align:top;'></a> <span class="info" id="form-bpw">(min 1 &nbsp; max 20)</span><br><br>
+		<input type="number" name="WeeksPerYear" id="WeeksPerYear" class="set-width" min="10" max="52" required> Weeks per year <a href="#openModalWeeksPerYear"><img src="questionmark24.png" alt='info' style='vertical-align:top;'></a> <span class="info"  id="form-wpy">(min 10 &nbsp; max 52)</span><br><br>
+		<input type="number" name="MyNumber" id="MyNumber" class="set-width" min="1" max="6" required> Preferred dice number <span class="info" id="form-pdn">(your lucky number)</span><br><br>
+		<input type="number" name="LimitOutlay" id="LimitOutlay" class="set-width" min="0" max="100000" required> Your maximum debt <a href="#openModalMaximumDebt"><img src="questionmark24.png" alt='info' style='vertical-align:top;'></a> <span class="info" id="form-lo">(max: 100,000)</span><br><br>
+		<input type="number" name="LimitBet" id="LimitBet" class="set-width" min="0" max="10000" required> Your maximum bet <a href="#openModalMaximumBet"><img src="questionmark24.png" alt='info' style='vertical-align:top;'></a> <span class="info" id="form-lb">(max: 10,000)</span><br><br>
+
+		<select name="ChosenOdds" id="ChosenOdds" class="set-width">
+			<option value="4/1">4/1</option>
+			<option value="5/1" selected>5/1</option>
+			<option value="6/1">6/1</option>
+		</select>&nbsp; The odds you will use <a href="#openModalOdds"><img src="questionmark24.png" alt='info' style='vertical-align:top;'></a> <br><br>
+
+		<select name="LevelVariable" id="LevelVariable" class="set-width">
+			<option value="Variable">Variable</option>
+			<option value="Level">Level</option>
+		</select>&nbsp; Level <a href="#openModalLevelBets"><img src="questionmark24.png" alt='info' style='vertical-align:top;'></a>  or Variable <a href="#openModalVariableBets"><img src="questionmark24.png" alt='info' style='vertical-align:top;'></a> bets <span class="info" id="form-lv"></span><br><br>
+
+		<input class='gobutton' type='submit' name='cmdOK' value='Start'> &nbsp;
+
+	</form>
+	<button class='gobutton' id="goback" onclick="swappages()" style="display:none">Go back, no change</button>
+	</td>
+	</tr>
+	</table>
+
+</div> <!-- start-form -->
+
+
+<div id="page1" style="display:none;">
+
+	<table class="outertable">
+		<tr>
+			<td>
+				<table style='width: 100%;'>
+					<tr>
+						<td class='color5 headerbutton'><a href="#openModalExplain">Explain</a></td>
+						<td class='color5 headerbutton'><a href="#" onClick="showfeedbackform(); return false;" >Contact me</a></td>
+						<td class='color5 headerbutton'><a href='#openModalAbout'>About&nbsp;this&nbsp;app</a></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class='color4'>
+				<span id="totalyears1" style="font-size:20px">0 years</span>
+					<input type="button" class='gobutton' id="mainclick" onclick="PlayYear()" value='Bet for a year'> &nbsp;
+					<span id="gonebust" style='display:none'><input type="button" class='redbutton' onclick="location.href='#openModalGoneBust';" value='Doh&#33;&nbsp; I&apos;m stuck'></span>
+					<input type="button" class='gobutton' onclick="swappages()" value='Change Settings'>
+					<span style="float:right"><input type="button"  class='redbutton' onclick="location.href='#openModalQUIT';" value="STOP" /></span>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td class='color2'>
+				<span class='bigbold'>Settings</span><br>
+				<span style="font-size:115%">
+				Annual Target: <span id='AnnualTarget2'>xx</span>&nbsp; Bets per Week: <span id='BetsPerWeek2'>xx</span>&nbsp; Betting&nbsp;Weeks&nbsp;per&nbsp;Year:&nbsp;<span id='WeeksPerYear2'>xx</span><br>
+				Limit of Debt: <span id='LimitOutlay2'>xx</span>&nbsp; Maximum Bet: <span id='LimitBet2'>xx</span>&nbsp; Chosen&nbsp;Number:&nbsp;<span id='MyNumber2'>xx</span><br>
+				</span>
+				<span style="display:none">
+				Chosen Odds: <span id='ChosenOdds2'>xx</span>
+				Method: <span id='LevelVariable2'>xx</span><br>
+				</span>
+
+				<button class='gobutton' onclick="return showornot('allresults'); return false;" style="display:block; margin-left:auto; margin-right:auto;">show/hide all results for the year</button>
+
+			</td>
+		</tr>
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv all results vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+		<tr>
+			<td id="allresults" style="display:none;"></td>
+		</tr>
+
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv  this year  vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+		<tr>
+			<td class='color3'>
+				<span class='bigbold'>This year</span><br>
+				Occurences:
+				1: <b><span id="count1">0</span></b>&nbsp;&nbsp;
+				2:<b><span id="count2">0</span></b>&nbsp;&nbsp;
+				3 <b><span id="count3">0</span></b>&nbsp;&nbsp;
+				4: <b><span id="count4">0</span></b>&nbsp;&nbsp;
+				5: <b><span id="count5">0</span></b>&nbsp;&nbsp;
+				6: <b><span id="count6">0</span></b>&nbsp;&nbsp;
+				All: <b><span id="countall">0</span></b><br>
+				Max Winning Streak: <b><span id="maxwinningstreak">0</span></b>&nbsp;&nbsp; Max Losing Streak: <b><span id="maxlosingstreak">0</span></b>
+
+
+				<table class='innertable' style='width: 100%;'>
+					<tr>
+						<td class='href'><a href="#openModalOdds">Odds</a></td>
+						<td style='border:none;'>&nbsp;</td>
+						<td class='href' colspan='3' id='level-1'><a href="#openModalLevelBets">Level Bets</a></td>
+						<td style='border:none;'>&nbsp;</td>
+						<td class='href' colspan='2' id='variable-1'><a href="#openModalVariableBets">Variable Bets</a></td>
+					</tr>
+
+
+					<tr>
+						<!--Buy At -->
+						<TH style='width:8%'><a href="#openModalBuyAt">Deal</a></TH>
+						<TH style='border:none;'>&nbsp;</TH>
+
+						<!--Tank-->
+						<TH style='width:16%'><a href="#openModalTank">Account</a></TH>
+
+						<!--Worst-->
+						<TH style='width:16%'><a href="#openModalWorst">Worst</a></TH>
+
+						<!--Best-->
+						<TH style='width:16%'><a href="#openModalBest">Best</a></TH>
+
+						<TH style='border:none;'>&nbsp;</TH>
+
+						<!--Pocket-->
+						<TH style='width:16%'><a href="#openModalPocket">Pocket</a></TH>
+
+						<!--Worst Outlay-->
+						<TH style='width:23%'><a href="#openModalWorstOutlay">Worst</a></TH>
+					</tr>
+
+					<tr>
+						<td style='text-align:center;' id='odds4/1-1'>4/1</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td id='level4tank' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='level4worst' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='level4best' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td id='v4pocket' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='v4worst' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+					</tr>
+
+					<tr>
+						<td style='text-align:center;' id='odds5/1-1'>5/1</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td id='level5tank' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='level5worst' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='level5best' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td id='v5pocket' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='v5worst' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+					</tr>
+
+					<tr>
+						<td style='text-align:center;' id='odds6/1-1'>6/1</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td id='level6tank' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='level6worst' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='level6best' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td id='v6pocket' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='v6worst' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+					</tr>
+				</table>
+				<span id="gonebustthisyear" style='display:none'>...</span>
+				</td>
+		</tr>
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv  all  years  vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+		<tr>
+			<td class='color4'>
+				<span class='bigbold'>After <span id="totalyears">0 years</span></span><br>
+				Averaging <span id="averaging">&nbsp;</span>
+				<table class='innertable' style='width: 100%;'>
+
+					<tr>
+						<td style='text-align:center;'>Odds</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td style='text-align:center;' id='level-2' colspan='2'>Level Bets</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td style='text-align:center;' id='variable-2'>Variable Bets</td>
+					</tr>
+
+					<tr>
+						<TH>Deal</TH>
+						<TH style='border:none;'>&nbsp;</TH>
+						<TH>Account</TH>
+						<TH>Average p/a</TH>
+						<TH style='border:none;'>&nbsp;</TH>
+						<TH>Worst Ever</TH>
+					</tr>
+
+					<tr>
+						<td style='text-align:center;' id='4/1-2'>4/1</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td id='level4tankever' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='level4average' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td style='border:none; text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='v4worstever' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+					</tr>
+
+					<tr>
+						<td style='text-align:center;' id='5/1-2'>5/1</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td id='level5tankever' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='level5average' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td style='border:none; text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='v5worstever' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+					</tr>
+
+					<tr>
+						<td style='text-align:center;' id='6/1-2'>6/1</td>
+						<td style='border:none;'>&nbsp;</td>
+						<td id='level6tankever' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='level6average' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td style='border:none; text-align:right; font-weight:bold;'>&nbsp;</td>
+						<td id='v6worstever' style='text-align:right; font-weight:bold;'>&nbsp;</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div> <!-- page1 -->
+
+
+<!--  ..............................................  feedback  ..............................................  -->
+<div id="feedback" style="display:none;">
+	<button class='gobutton' onClick="showfeedbackform()" style="display:block; margin-left:auto; margin-right:auto;">Return</button>
+	<div class="center">
+		<iframe src='https://newsway.co.uk/gamble/email/contactform.php' style='display:block; height:440px; width:400px; border:0px; margin-left:auto; margin-right:auto;' ></iframe>
+	</div>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx hidden divs xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+	<div id="openModalExplain" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Betting for an income</H2>
+
+			<p>The idea behind this illustration is to show what could happen if you chose betting to provide a significant income.</p>
+			<p>You would set:</p>
+			<UL>
+			<LI>Annual target income, between 1,000 and 100,000</LI>
+			<LI>Bets per week - the number of bets you could expect to place after studying the probabilities and the prices.</LI>
+			<LI>How many weeks you would work each year - the remainder being holiday and time to enjoy your winnings.</LI>
+			<li>The odds you would accept. 4/1, 5/1 or 6/1</li>
+			<li>How low you would allow your account to go. Limited to 100,000 for the purposes of this app.</li>
+			<li>What would be your maximum bet. Limited to 10,000 as this is commonly the limit at most bookmakers.</li>
+			</UL>
+
+			<p>The figures in the boxes are just suggestions. Change them as you wish.</p>
+			<p>If you exceed any of your limits you will need to start again.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalRestart" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Restart my life</H2>
+
+			<h3>If you need to restart you might admit that gambling is not for you.</h3>
+			<p><a href='https://www.gamblersanonymous.org.uk' target='_blank'>Please take me to Gamblers Anonymous (UK)</a></p>
+			<p>The only way to start again is to <a href="#" onclick="return showornot('start-form');">start form again</a>.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalGoneBust" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>You have exceded your limits</H2>
+
+			<p>You cannot continue with the current settings. You might like to try a different scenario.</p>
+			<p>If you just close this message you can review what happened.</p>
+			<p>The only way to start again is to change your settings and start again.</p>
+			<p><a href='https://www.gamblersanonymous.org.uk' target='_blank'>Please take me to Gamblers Anonymous (UK)</a></p>
+		</div>
+	</div>
+
+
+	<div id="openModalQUIT" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>You want to stop?</H2>
+
+			<p>If you want to stop just close the app.</p>
+			<p>If you need help with stopping gambling you could try<br><a href='https://www.gamblersanonymous.org.uk' target='_blank'>Gamblers Anonymous (UK)</a>.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalAbout" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>About this app</H2>
+			<p>This app was originally inspired by my attempts to see how computers could beat the bookies. As you will see it&apos;s not easy and even if you can find favourable odds (which will be impossible for something as simple as a dice) you can still end up broke.</p>
+			<p>There is a contact form if you would like to make comments or ask questions.</p>
+			<p>I wish you luck - you&apos;ll need it.</p>
+			<p>Brian</p>
+		</div>
+	</div>
+
+
+	<div id="openModalOdds" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Odds</H2>
+
+			<p>You&apos;ll be bettng at the odds offered by the bookmaker. A couple of usesful guides to how odds are set can be found at these links - <a href='https://en.wikipedia.org/wiki/Mathematics_of_bookmaking' target='_blank'>Wikipedia</a> and <a href='http://www.allaboutbetting.co.uk/bettingbasics/howbookswork.html' target='_blank'>All About Betting</a>
+			</p>
+		</div>
+	</div>
+
+
+	<div id="openModalLevelBets" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Level Bets</H2>
+
+			<p>Level bets are calculated to make the target income using the annual number of bets and winning once in every 6 rolls.<br><br>So if you aim to make 6,000 in a year placing 60 bets at 5/1, you would expect to win one in six rolls, i.e. you win on 60/6 occasions, which is 10 wins in the year. You&apos;ll need to win 600 on each of these 10 wins.<br><br>You need to place bets of 120 so that you win 5 x 120 on each of your wins.
+			<br><br>Unfortunately, at 5/1 you will lose as much as you win and after many years should have broken even.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalVariableBets" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Variable Bets</H2>
+
+			<p>Variable bets are intended to make you a guaranteed income by winning a known amount and clearing all previous losses.<br><br>So if you aim to make 6,000 in a year placing 60 bets at 5/1, you would expect to win one in six rolls, i.e. win on 60/6 occasions, which is 10 wins in the year. You&apos;ll need to win 600 on each of these 10 wins, PLUS you need to recover previous losses, so you aim to win £600 + the deficit in your account.<br><br>So if your account shows -1,000 you need to place a bet to win 1600, which at 5/1 would be £320</p>
+		</div>
+	</div>
+
+
+	<div id="openModalBuyAt" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>The Deal</H2>
+
+			<p>For the purposes of this app your wagers are deals between you and the bookie.</p>
+
+			<p>You&apos;re accepting the odds offered by the bookmaker on the chance of rolling a certain number. In most gambling - especially on sporting events - it is not possible to be so precise about the real probability of success. Nevertheless, the possibility exists for any horse/person/team to win or for any event to happen. The skill comes in finding the probability of that and buying at odds better than that probability.</p>
+			<p>A wager at 5/1 means you&apos;ll place six bets of 1 and on the last bet you will win 5 plus your stake of 1 and thus, over six bets, you have won nothing and lost nothing. After 300 years of placing bets every day that&apos;s exactly where you&apos;ll be - NOT richer but NOT poorer.</p>
+			<p>A wager at 6/1 would find you in profit overall but you will need to manage long streaks of losing. If you&apos;re using variable bets, you could find the size of bet impossible when you need to recover a run of losses. If you&apos;re using level bets you&apos;re much safer but still could find problems after a long losing streak.</p>
+			<p>A wager at 4/1 - which any bookmaker still in business might be offering - makes you definitely a LOSER&#33;</p>
+		</div>
+	</div>
+
+
+	<div id="openModalTank" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Account</H2>
+
+			<p>The Account supplies the funds for your bets. It starts at zero. It is recalculated after every bet, usually going downwards. You would like it to go up but effectively it&apos;s your level of debt and this is what you set as your limit of debt.</p>
+
+			<p>Using level bets it might never be restored to zero. This is because you are not aiming to cover previous losses - you are simply aiming to make your annual target by winning once in every six rolls.</p>
+
+			<p>Using variable bets the account is restored to zero every time you win, and, in addition, you make a little profit on your way to your annual target, expecting to win once in every six rolls.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalWorst" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Worst (using level bets)</H2>
+
+			<p>On level bets this is the most you would be in debt. This is the lowest your account would be during the year.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalBest" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Best (using level bets)</H2>
+
+			<p>On level bets this is the most you would be in profit. The best your account would be during the year.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalPocket" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Pocket</H2>
+
+			<p>On variable bets this is the amount you would have in your pocket at the end of the year.</p>
+			<p>Every bet is calculated to restore your account to zero and make some money for your pocket.  Note that no matter what the odds, you will get the same income from the same number of wins. However, you may need a substantial resource to cover your debts at any odds - as you might see in the next column. I have called this &quot;Pocket&quot; to reflect your profit taken during the year. After each year your Pocket should contain your Annual Target, approximately.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalWorstOutlay" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Worst (using variable bets)</H2>
+
+			<p>This figure shows maximum debt you could have in the year. The figure is the sum of your losses since your last win. Often, this figure is far beyond possibility and serves to illustrate the inherent flaw of using variable bets.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalAverage" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Average occurence of a number</H2>
+
+			<p>The number of occurrences of any number on a dice will, after enough rolls, tend towards once in every six rolls. That is, on average, in six rolls, your number will occur once and other numbers will occur on the other five rolls. The number shown here is the actual ratio occuring in this illustration. It is as true to life as you could expect. After many years this should tend to exactly 1/5. It may take over 40,000 rolls for this to stabilise.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalAfford" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Could you afford it?</H2>
+
+			<p>Using variable bets to recover previous losses and make a small profit cannot work unless you have many millions available and your target profit is comparatively small.</p>
+			<p>Buying at your chosen odds using variable bets you would have needed funds beyond your limit.</p>
+			<p>This is the bet you need to place to recover previous losses and make your small profit. If you watch this figure after each year&apos;s betting, you will soon realise the impossibility of this method. If you were rich enough to be betting this way, the annual income would not be sufficient to pay your domestic bills. Sooner or later you will need to place a bet that no one will accept&#33;</p>
+		</div>
+	</div>
+
+
+	<div id="openModalTellAll" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>About this app</H2>
+
+			<p>This app will later link to a website to tell about your best performance - and maybe there will be a blog.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalAnnualTarget" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Annual Target</H2>
+
+			<p>Your annual target is what you would like to achieve in a year.</p>
+			<p> Using level bets at 5/1 you are very unlikely to reach that target. Using variable bets at any odds there is a possibility that you could reach your annual target some years BUT you will LOSE EVERYTHING sooner or later!</p>
+		</div>
+	</div>
+
+
+	<div id="openModalBetsPerWeek" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Bets Per Week</H2>
+
+			<p>Obviously you could bet on a rolling dice hundreds of time each day, but this app is aimed more at the punter who studies form and places just a few careful bets each week.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalWeeksPerYear" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Weeks Per Year</H2>
+
+			<p>As with the bets per week this app is aimed at the punter who dedicates certain weeks to gambling and other weeks to other activities.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalMaximumDebt" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Maximum Debt</H2>
+
+			<p>You can set the level of your maximum debt. For practical purposes this is limited to 100,000 in this app. This may not seem a lot but in whether this is in GBP, USD or EUR it still represents a pretty big sum that most people could not afford.</p>
+		</div>
+	</div>
+
+
+	<div id="openModalMaximumBet" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<H2>Maximum Bet</H2>
+
+			<p>The maximum bet accepted by most UK bookmakers is 10,000. Obviously they want to get your money but, at the same time, they need to limit their own exposure. In some cases bookies limit the maximum payout but either way there are limits that prevent you placing very large bets.</p>
+		</div>
+	</div>
+
+
+<script>
+	document.getElementById("AnnualTarget2").innerHTML = "<b>" + WithCommas(gvAnnualTarget) + "</b>";
+	document.getElementById("BetsPerWeek2").innerHTML = "<b>" + gvBetsPerWeek + "</b>";
+	document.getElementById("WeeksPerYear2").innerHTML = "<b>" + gvWeeksPerYear + "</b>";
+	document.getElementById("ChosenOdds2").innerHTML = "<b>" + gvChosenOdds + "</b>";
+	document.getElementById("LimitOutlay2").innerHTML = "<b>" + WithCommas(gvLimitOutlay) + "</b>";
+	document.getElementById("LimitBet2").innerHTML = "<b>" + WithCommas(gvLimitBet) + "</b>";
+	document.getElementById("MyNumber2").innerHTML = "<b>" + gvMyNumber + "</b>";
+	document.getElementById("LevelVariable2").innerHTML = "<b>" + gvLevelVariable + "</b>";
+
+	document.getElementById("AnnualTarget").value = gvAnnualTarget;
+	document.getElementById("BetsPerWeek").value = gvBetsPerWeek;
+	document.getElementById("WeeksPerYear").value = gvWeeksPerYear;
+	document.getElementById("ChosenOdds").value = gvChosenOdds;
+	document.getElementById("LimitOutlay").value = gvLimitOutlay;
+	document.getElementById("LimitBet").value = gvLimitBet;
+	document.getElementById("MyNumber").value = gvMyNumber;
+	document.getElementById("LevelVariable").value = gvLevelVariable;
+
+	if (gvAnnualTarget && gvBetsPerWeek &&  gvWeeksPerYear && gvChosenOdds && gvLimitOutlay && gvLimitBet && gvMyNumber && gvLevelVariable) {
+		document.getElementById('start-form').style.display='none';
+		document.getElementById('page1').style.display='block';
+	} else {
+		document.getElementById('start-form').style.display='block';
+		document.getElementById('page1').style.display='none';
+	}
+
+	if (gvLevelVariable === 'Level') {document.getElementById('level-1').style.backgroundColor='yellow'; document.getElementById('level-2').style.backgroundColor='yellow'}
+	if (gvLevelVariable != 'Level') {document.getElementById('variable-1').style.backgroundColor='yellow'; document.getElementById('variable-2').style.backgroundColor='yellow'}
+
+	if (gvChosenOdds === '4/1') {document.getElementById('odds4/1-1').style.backgroundColor='yellow'; document.getElementById('4/1-2').style.backgroundColor='yellow'}
+	if (gvChosenOdds === '5/1') {document.getElementById('odds5/1-1').style.backgroundColor='yellow'; document.getElementById('5/1-2').style.backgroundColor='yellow'}
+	if (gvChosenOdds === '6/1') {document.getElementById('odds6/1-1').style.backgroundColor='yellow'; document.getElementById('6/1-2').style.backgroundColor='yellow'}
+</script>
+
+</body>
+</HTML>
